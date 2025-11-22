@@ -8,9 +8,10 @@ def home(request):
             Task.objects.create(title=title, user=request.user if request.user.is_authenticated else None)
         return redirect('home')
 
-        if request.user.is_authenticed:
-            tasks = task.objects.filter(user=request.user)
+        if request.user.is_authenticated:
+            tasks = Task.objects.filter(user=request.user)
 
-            else:
+            else:            
     tasks = Task.objects.all()
+    
     return render(request, 'tasks/home.html', {'tasks': tasks})

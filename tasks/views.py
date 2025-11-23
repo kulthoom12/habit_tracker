@@ -17,4 +17,4 @@ def home(request):
     else:
         tasks = Task.objects.all()
 
-    return render(request, 'tasks/home.html', {'tasks': tasks})
+    return render(request, 'tasks/index.html', {'tasks': tasks})

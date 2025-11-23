@@ -6,20 +6,26 @@
   <title>Habit Tracker</title>
 </head>
 <body>
+  <header> 
+    <!-- header -->
+    <h1>Habit Tracker</h1>
+    <a href="{% url 'add_habit' %}">Add Habit</a>
+  </header>
 
-  <!--main header-->
-  <h1>Habit Tracker</h1>
-
-<!--habit tracker link-->
-  <p><a href ="#" ></a></p>
-  <!--list-->
-  <ul>
-  {% for habit in tasks %}
-    <li>{{ habit.name }} - {{ habit.frequency }}</li>
-  {% empty %}
-    <li>No habits yet. maybe add some?</li>
-  {% endfor %}
-  </ul>
+  <main>
+    <!-- habit list -->
+    <ul>
+      {% for habit in habits %}
+        <li>
+          <input type="checkbox" {% if habit.completed_today %}checked{% endif %}> 
+          <span class="{% if habit.completed_today %}completed{% endif %}">{{ habit.name }}</span> 
+          <span>Streak: {{ habit.streak }}</span> 
+          <a href="{% url 'mark_completed' habit.pk %}">Complete</a>
+          <a href="{% url 'edit_habit' habit.pk %}" class="edit-link">Edit</a>
+          <a href="{% url 'delete_habit' habit.pk %}">Delete</a> 
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
 </body>
-
 </html>

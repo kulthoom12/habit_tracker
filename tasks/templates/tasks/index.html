@@ -14,11 +14,11 @@
   <p><a href ="#" ></a></p>
   <!--list-->
   <ul>
-    <li>Stop biting nails</li>
-    <li>Read a book</li>
-    <li>Excersise daily</li>
-    <li>Shower daily</li>
-    <li>Drink Medication daily</li>
+  {% for habit in tasks %}
+    <li>{{ habit.name }} - {{ habit.frequency }}</li>
+  {% empty %}
+    <li>No habits yet. maybe add some?</li>
+  {% endfor %}
   </ul>
 </body>
 

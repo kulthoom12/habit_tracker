@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--head-->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Title-->
   <title>Habit Tracker</title>
-
+  <!--dynamic css-->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
+<!--body-->
+
 <body>
+  <!--header-->
   <header>
     <h1>Habit Tracker</h1>
-
     <nav>
       <a href="{% url 'task_create' %}" aria-label="Add new habit">Add Habit</a>
     </nav>
   </header>
 
+  <!--main section-->
   <main>
     <h2>Your habits</h2>
 
@@ -35,10 +40,10 @@
           <span>Streak: {{ habit.streak }}</span>
         </label>
 
-        <!-- Edit -->
+        <!-- Edit Tasks -->
         <a href="{% url 'task_update' habit.pk %}" class="edit-link">Edit</a>
 
-        <!-- Delete -->
+        <!-- Delete Task-->
         <a href="{% url 'task_delete' habit.pk %}">Delete</a>
 
       </li>

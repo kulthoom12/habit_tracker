@@ -24,18 +24,17 @@ def task_create(request):
 
 
 def task_update(request, pk):
-   task = get_object_or_404(Task, id=pk)
-   if request.method == "POST":
-      task.title = request.POST.get("title")
-
-
-if request.POST.get("completed") == "on":
+    task = get_object_or_404(Task, id=pk)
+    if request.method == "POST":
+        task.title = request.POST.get("title")
+        if request.POST.get("completed") == "on":
             task.completed = True
         else:
             task.completed = False
-            task.save()
+        task.save()
         return redirect("task_list")
-return render(request, "tasks/task_form.html", {"task": task})
+    return render(request, "tasks/task_form.html", {"task": task})
+
 
 def task_delete(request, pk):
       task = get_object_or_404(Task, id=pk)

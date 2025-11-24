@@ -7,20 +7,20 @@ def task_list(request):
         tasks = Task.objects.filter(user=request.user)
     else:
         tasks = Task.objects.all()
-    
+
     return render(request, "tasks/task_list.html", {"tasks": tasks})
+
 
 def task_create(request):
     if request.method == "POST":
         title = request.POST.get("title")
-
-        if title != "";
-           Task.objects.create(
-              user=request.user if request.user.is_authenticated
-              else None,
-              title=title)
-           return redirect("task_list")
-        return render(request, "tasks/task_form.html")
+        if title != "":
+            Task.objects.create(
+                user=request.user if request.user.is_authenticated else None,
+                title=title
+            )
+        return redirect("task_list")
+    return render(request, "tasks/task_form.html")
 
 
 def task_update(request, pk):

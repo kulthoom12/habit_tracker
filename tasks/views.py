@@ -41,6 +41,7 @@ def task_delete(request, pk):
     task.delete()
     return redirect("task_list")
 
+
 def clear_completed(request):
     done_tasks = Task.objects.filter(completed=True)
     done_tasks.delete()

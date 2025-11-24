@@ -3,13 +3,12 @@ from .models import Task
 
 
 def task_list(request):
-  if request.user.is_authenticated:
+    if request.user.is_authenticated:
+        tasks = Task.objects.filter(user=request.user)
     else:
-
-
-tasks = Task.objects.all()
-return render(request, "tasks/task_list.html", {"tasks": tasks})
-
+        tasks = Task.objects.all()
+    
+    return render(request, "tasks/task_list.html", {"tasks": tasks})
 
 def task_create(request):
     if request.method == "POST":

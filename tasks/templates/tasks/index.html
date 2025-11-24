@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habit Tracker</title>
+  <!--style.css-->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
+
 <body>
-  <header> 
+  <header>
     <!-- header -->
     <h1>Habit Tracker</h1>
-    <a href="{% url 'add_habit' %}">Add Habit</a>
+    <!--link to add a new habit-->
+    <nav <a href="{% url 'add_habit' %}">" aria-label="Add new habit" Add Habit</a>
+    </nav>
   </header>
-
+  <!--main section-->
   <main>
+    <h2>Your habits</h2>
     <!-- habit list -->
     <ul>
+
+      <!--create habits-->
       {% for habit in habits %}
-        <li>
-          <input type="checkbox" {% if habit.completed_today %}checked{% endif %}> 
-          <span class="{% if habit.completed_today %}completed{% endif %}">{{ habit.name }}</span> 
-          <span>Streak: {{ habit.streak }}</span> 
-          <a href="{% url 'mark_completed' habit.pk %}">Complete</a>
-          <a href="{% url 'edit_habit' habit.pk %}" class="edit-link">Edit</a>
-          <a href="{% url 'delete_habit' habit.pk %}">Delete</a> 
-        </li>
+      <li>
+        <!--wrapped in labels-->
+        <label for="habit-{{ habit.id }}" <!--completed or not-->
+          <input type="checkbox" id="habit-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}
+            aria-checked="{{ habit.completed_today }}">
+          <span class="{% if habit.completed_today %}completed{% endif %}">{{ habit.name }}</span>
+          <span>Streak: {{ habit.streak }}</span>
+          <!--how many days completed-->
+          <a href="{% url 'mark_completed' habit.pk %}" aria-label="Mark as completed">Complete</a>
+          <!--edit task-->
+          <a href="{% url 'edit_habit' habit.pk %}" class="edit-link" aria-label="Edit habit">Edit</a>
+          <!--delete habit/task-->
+          <a href="{% url 'delete_habit' habit.pk %}" aria-label="Delete habit">Delete</a>
+      </li>
       {% endfor %}
     </ul>
   </main>
 </body>
+
 </html>

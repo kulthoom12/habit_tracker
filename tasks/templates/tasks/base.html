@@ -11,3 +11,14 @@
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
+
+<body> 
+  <!--navbar-->
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a>
+      <li><a href="{% url 'task_create' %}">Add Task</a></li>
+      <li><a href="{% url 'clear_completed' %}">Clear Completed<a></li>
+    </ul>
+  </nav>
+  

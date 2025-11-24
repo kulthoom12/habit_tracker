@@ -8,7 +8,7 @@ def task_list(request):
     else:
         tasks = Task.objects.all()
 
-    return render(request, "tasks/task_list.html", {"tasks": tasks})
+    return render(request, "tasks/index.html", {"tasks": tasks})
 
 
 def task_create(request):

@@ -1,5 +1,6 @@
 {% extends "tasks/base.html" %}
 {% block title %}Home - Habit Tracker{% endblock %}
+
 {% block content %}
 <h2>Your habits</h2>
 {% if habits %}
@@ -14,7 +15,7 @@
     <a href="{% url 'task_update' habit.pk %}" class="edit-link">Edit</a>
 
     <!-- Delete Task-->
-    <a href="{% url 'task_delete' habit.pk %}">Delete</a>
+    <a href="{% url 'task_delete' habit.pk %}" class="delete-link">Delete</a>
   </li>
   {% endfor %}
 </ul>

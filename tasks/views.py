@@ -6,7 +6,7 @@ def task_list(request):
     if request.user.is_authenticated:
         tasks = Task.objects.filter(user=request.user)
     else:
-        tasks = Task.objects.all()
+        tasks = Task.objects.filter(user=request.user)
 
     return render(request, "tasks/index.html", {"tasks": tasks})
 
@@ -20,7 +20,7 @@ def task_create(request):
                 title=title
             )
         return redirect("task_list")
-    return render(request, "tasks/task_form.html")
+    return render(request, "tasks/form.html")
 
 
 def task_update(request, pk):
@@ -33,7 +33,7 @@ def task_update(request, pk):
             task.completed = False
         task.save()
         return redirect("task_list")
-    return render(request, "tasks/task_form.html", {"task": task})
+    return render(request, "tasks/form.html", {"task": task})
 
 
 def task_delete(request, pk):

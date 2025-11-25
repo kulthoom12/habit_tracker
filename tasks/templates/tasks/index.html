@@ -8,19 +8,18 @@
   <li>
     <label>
       <input type="checkbox" id="habit-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}>
-    span class="{% if habit.completed_today %}completed{% endif %}">
-    <span>Streak: {{ habit.streak }}</span>
-  </label>
-<!--Edit Tasks -->
-        <a href="{% url 'task_update' habit.pk %}" class="edit-link">Edit</a>
+      span class="{% if habit.completed_today %}completed{% endif %}">
+      <span>Streak: {{ habit.streak }}</span>
+    </label>
+    <!--Edit Tasks -->
+    <a href="{% url 'task_update' habit.pk %}" class="edit-link">Edit</a>
 
-        <!-- Delete Task-->
-        <a href="{% url 'task_delete' habit.pk %}">Delete</a>
- </li>
-      {% endfor %}
-      </ul>
-      {% else %}
-      <p>No habits yet! <a href="{% url 'task_create' %}">Add a habit</a></p>
-      {% endif %}
-      {% endblock %}
- 
+    <!-- Delete Task-->
+    <a href="{% url 'task_delete' habit.pk %}">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No habits yet! <a href="{% url 'task_create' %}">Add a habit</a></p>
+{% endif %}
+{% endblock %}

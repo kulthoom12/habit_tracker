@@ -1,12 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Task
 
-
 def task_list(request):
     if request.user.is_authenticated:
         tasks = Task.objects.filter(user=request.user)
     else:
-        tasks = Task.objects.filter(user=request.user)
+        tasks = Task.objects.all()
 
     return render(request, "tasks/index.html", {"tasks": tasks})
 

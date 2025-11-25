@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <!--head-->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!--Title-->
   <title>Habit Tracker</title>
+
   <!--dynamic css-->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
+
   <!--navbar-->
   <nav>
     <ul>
-      <li><a href="{% url 'home' %}">Home</a>
+      <li><a href="{% url 'home' %}">Home</a></li>
       <li><a href="{% url 'task_create' %}">Add Task</a></li>
-      <li><a href="{% url 'clear_completed' %}">Clear Completed<a></li>
+      <li><a href="{% url 'clear_completed' %}">Clear Completed</a></li>
     </ul>
   </nav>
+
   <!-- Page Content -->
   <div class="content">
     {% block content %}

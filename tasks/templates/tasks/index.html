@@ -1,33 +1,26 @@
 {% extends "tasks/base.html" %}
 {% block title %}Home - Habit Tracker{% endblock %}
 {% endblock %}
-
-    <h2>Your habits</h2>
-
-    <ul>
-      {% for habit in habits %}
-      <li>
-        <label>
-          <input type="checkbox" id="habit-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}>
-
-          <span class="{% if habit.completed_today %}completed{% endif %}">
-            {{ habit.name }}
-          </span>
-
-          <span>Streak: {{ habit.streak }}</span>
-        </label>
-
-        <!-- Edit Tasks -->
+<h2>Your habits</h2>
+{% if habits %}
+<ul>
+  {% for habit in habits %}
+  <li>
+    <label>
+      <input type="checkbox" id="habit-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}>
+    span class="{% if habit.completed_today %}completed{% endif %}">
+    <span>Streak: {{ habit.streak }}</span>
+  </label>
+<!--Edit Tasks -->
         <a href="{% url 'task_update' habit.pk %}" class="edit-link">Edit</a>
 
         <!-- Delete Task-->
         <a href="{% url 'task_delete' habit.pk %}">Delete</a>
-
-      </li>
+ </li>
       {% endfor %}
-    </ul>
-  </main>
-
-</body>
-
-</html>
+      </ul>
+      {% else %}
+      <p>No habits yet! <a href="{% url 'task_create' %}">Add a habit</a></p>
+      {% endif %}
+      {% endblock %}
+ 

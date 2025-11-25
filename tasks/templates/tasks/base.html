@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
-<body> 
+<body>
   <!--navbar-->
   <nav>
     <ul>
@@ -21,4 +21,10 @@
       <li><a href="{% url 'clear_completed' %}">Clear Completed<a></li>
     </ul>
   </nav>
-  
+  <!-- Page Content -->
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

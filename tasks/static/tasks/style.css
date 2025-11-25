@@ -7,9 +7,34 @@ body {
 nav {
     padding: 10px; 
 }
-
 nav ul {
     list-style-type: none; 
     display: flex; 
     margin: 0;
 }
+/* Style the navbar links */
+nav ul li {
+    margin-right: 20px; 
+}
+nav ul li a {
+    text-decoration: none; 
+    padding: 5px 10px; 
+}
+/* space between navbar and content */
+.content {
+    padding: 20px;
+}
+/* Task list items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px; 
+}
+/* Input fields and buttons */
+input, button {
+    padding: 5px 10px;
+    margin: 10px 0;
+    display: block; }
+

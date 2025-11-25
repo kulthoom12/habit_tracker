@@ -5,21 +5,27 @@ body {
 }
 /* Style for navbar */
 nav {
+    background-color: black;
     padding: 10px; 
 }
 nav ul {
     list-style-type: none; 
     display: flex; 
     margin: 0;
+    padding:0;
+    gap:20px; 
 }
-/* Style the navbar links */
-nav ul li {
-    margin-right: 20px; 
-}
+
 nav ul li a {
+    color:white;
     text-decoration: none; 
     padding: 5px 10px; 
 }
+
+nav ul li a:hover{
+    text-decoration:underline ;
+}
+
 /* space between navbar and content */
 .content {
     padding: 20px;
@@ -37,4 +43,3 @@ input, button {
     padding: 5px 10px;
     margin: 10px 0;
     display: block; }
-

@@ -1,6 +1,6 @@
 {% extends "tasks/base.html" %}
 {% block title %}Home - Habit Tracker{% endblock %}
-{% endblock %}
+{% block content %}
 <h2>Your habits</h2>
 {% if habits %}
 <ul>
@@ -8,8 +8,7 @@
   <li>
     <label>
       <input type="checkbox" id="habit-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}>
-      span class="{% if habit.completed_today %}completed{% endif %}">
-      <span>Streak: {{ habit.streak }}</span>
+      <span class="{% if habit.completed_today %}completed{% endif %}">{{ habit.title }}</span>
     </label>
     <!--Edit Tasks -->
     <a href="{% url 'task_update' habit.pk %}" class="edit-link">Edit</a>

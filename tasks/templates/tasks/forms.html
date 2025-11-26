@@ -14,3 +14,20 @@
     <input type="text" name="title" id="habit-title" class="form-control" value="{{ habit.title if habit else '' }}"
       required>
   </div>
+  
+  <!--Habit Description-->
+  <div class="mb-3">
+    <label for="habit-description" class="form-label">Description</label>
+    <textarea name="description" id="habit-description" class="form-control"
+      required>{{ habit.description if habit else '' }}</textarea>
+  </div>
+
+  <!-- Habit Frequency -->
+  <div class="mb-3">
+    <label for="habit-frequency" class="form-label">Frequency</label>
+    <select name="frequency" id="habit-frequency" class="form-control" required>
+      <option value="daily" {% if habit and habit.frequency=='daily' %}selected{% endif %}>Daily</option>
+      <option value="weekly" {% if habit and habit.frequency=='weekly' %}selected{% endif %}>Weekly</option>
+      <option value="monthly" {% if habit and habit.frequency=='monthly' %}selected{% endif %}>Monthly</option>
+    </select>
+  </div>

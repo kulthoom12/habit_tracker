@@ -3,7 +3,7 @@ from .models import Habit
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login
 
-
+# Register View
 def register(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
@@ -12,24 +12,24 @@ def register(request):
             login(request, user)
             return redirect('home')
     else:
-        form = UserCreationForm()
+        form = UserCreationForm() 
 
-    return render(request, "habits/register.html", {"form": form})
+    return render(request, "habits/register.html", {"form": form}) 
 
-
+# Login View
 def login_view(request):
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
-            user = form.get_user()
-            login(request, user)
+            user = form.get_user() 
+            login(request, user) 
             return redirect('home')
     else:
         form = AuthenticationForm()
 
     return render(request, "habits/login.html", {"form": form})
 
-
+# Habit List
 def habits_list(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -37,7 +37,7 @@ def habits_list(request):
     habits = Habit.objects.filter(user=request.user)
     return render(request, "habits/index.html", {"habits": habits})
 
-
+# Habit Create View
 def habits_create(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -59,43 +59,43 @@ def habits_create(request):
 
     return render(request, "habits/form.html")
 
-
+# Habit Update View
 def habits_update(request, pk):
     if not request.user.is_authenticated:
-        return redirect('login')
+        return redirect('login') 
 
     habit = get_object_or_404(Habit, id=pk)
     if habit.user != request.user:
-        return redirect("habits_list")
+        return redirect("habits_list") 
 
     if request.method == "POST":
         habit.title = request.POST.get("title")
-        habit.completed_today = 'completed_today' in request.POST
+        habit.completed_today = 'completed_today' in request.POST 
         habit.frequency = request.POST.get("frequency")
 
+        # Update streak
         if habit.completed_today:
             habit.streak += 1
-        else:
-            habit.streak = 0
+            habit.streak = 
 
-        habit.save()
+        habit.save() 
         return redirect("habits_list")
 
     return render(request, "habits/form.html", {"habit": habit})
 
-
+# Habit Delete View
 def habits_delete(request, pk):
     if not request.user.is_authenticated:
         return redirect('login')
 
-    habit = get_object_or_404(Habit, id=pk)
+    habit = get_object_or_404(Habit, id=pk)  
     if habit.user != request.user:
         return redirect("habits_list")
 
     habit.delete()
     return redirect("habits_list")
 
-
+# Clear Completed Habits View
 def habits_clear_completed(request):
     if not request.user.is_authenticated:
         return redirect('login')

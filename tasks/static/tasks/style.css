@@ -7,16 +7,18 @@ body {
 .content {
     padding: 20px;
 }
-/* Task list items */
-ul {
+/* habit items */
+ul.habit-list {
     list-style-type: none;
     padding: 0;
 }
-li {
+li.habit-item {
     margin-bottom: 10px; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
 }
-/* Input fields and buttons */
-input, button {
-    padding: 5px 10px;
-    margin: 10px 0;
-    display: block; }
+.habit-checkbox {
+    display: flex;
+    align-items: center;
+}

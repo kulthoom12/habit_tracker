@@ -1,4 +1,4 @@
-{% extends "tasks/base.html" %}
+{% extends "habits/base.html" %}
 
 {% block title %}Create / Update Habit - Habit Tracker{% endblock %}
 
@@ -8,38 +8,39 @@
 <form method="POST">
 
   {% csrf_token %}
-  <!--Habit Title-->
+  
+  <!-- Habit Title -->
   <div class="mb-3">
-    <label for="habit-title" class="form-label">Habit Title</label>
-    <input type="text" name="title" id="habit-title" class="form-control" value="{{ habit.title if habit else '' }}"
+    <label for="habits-title" class="form-label">Habit Title</label>
+    <input type="text" name="title" id="habits-title" class="form-control" value="{{ habit.title if habit else '' }}"
       required>
   </div>
 
-  <!--Habit Description-->
+  <!-- Habit Description -->
   <div class="mb-3">
-    <label for="habit-description" class="form-label">Description</label>
-    <textarea name="description" id="habit-description" class="form-control"
+    <label for="habits-description" class="form-label">Description</label>
+    <textarea name="description" id="habits-description" class="form-control"
       required>{{ habit.description if habit else '' }}</textarea>
   </div>
 
   <!-- Habit Frequency -->
   <div class="mb-3">
-    <label for="habit-frequency" class="form-label">Frequency</label>
-    <select name="frequency" id="habit-frequency" class="form-control" required>
+    <label for="habits-frequency" class="form-label">Frequency</label>
+    <select name="frequency" id="habits-frequency" class="form-control" required>
       <option value="daily" {% if habit and habit.frequency=='daily' %}selected{% endif %}>Daily</option>
       <option value="weekly" {% if habit and habit.frequency=='weekly' %}selected{% endif %}>Weekly</option>
       <option value="monthly" {% if habit and habit.frequency=='monthly' %}selected{% endif %}>Monthly</option>
     </select>
   </div>
 
-  <!-- Completed Today-->
+  <!-- Completed Today -->
   <div class="form-check">
-    <input type="checkbox" name="completed_today" id="habit-completed" class="form-check-input" {% if habit and
+    <input type="checkbox" name="completed_today" id="habits-completed" class="form-check-input" {% if habit and
       habit.completed_today %}checked{% endif %}>
-    <label for="habit-completed" class="form-check-label">Completed Today </label>
+    <label for="habits-completed" class="form-check-label">Completed Today </label>
   </div>
 
-  <!-- Submit Button-->
+  <!-- Submit Button -->
   <button type="submit" class="btn btn-primary">
     {% if habit %}Update Habit{% else %}Save Habit{% endif %}
   </button>

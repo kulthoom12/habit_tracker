@@ -7,18 +7,18 @@ body {
 .content {
     padding: 20px;
 }
-/* habit items */
-ul.habit-list {
+/* habits items */
+ul.habits-list {
     list-style-type: none;
     padding: 0;
 }
-li.habit-item {
+li.habits-item {
     margin-bottom: 10px; 
     display: flex; 
     justify-content: space-between;
     align-items: center; 
 }
-.habit-checkbox {
+.habits-checkbox {
     display: flex;
     align-items: center;
 }

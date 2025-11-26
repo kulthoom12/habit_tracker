@@ -1,0 +1,16 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}Create / Update Habit - Habit Tracker{% endblock %}
+
+{% block content %}
+<h2>{% if habit %}Edit Habit{% else %}Add New Habit{% endif %}</h2>
+
+<form method="POST">
+
+  {% csrf_token %}
+  <!--Habit Title-->
+  <div class="mb-3">
+    <label for="habit-title" class="form-label">Habit Title</label>
+    <input type="text" name="title" id="habit-title" class="form-control" value="{{ habit.title if habit else '' }}"
+      required>
+  </div>

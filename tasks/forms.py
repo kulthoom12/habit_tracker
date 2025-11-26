@@ -1,8 +1,8 @@
 from django.shortcuts import forms
-from .models import Task
+from .models import Habit
 
 
-class TaskForm(forms.ModelForm):
+class HabitForm(forms.ModelForm):
     class Meta:
-        model = Task
+        model = Habit
         fields = ['title', 'description', 'completed']

@@ -1,27 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+:root {
+  /* Primary Color Palette */
+  --background-color: #FAD0C9;
+  --text-color: #2C3E50;
 
-/* space between navbar and content */
-.content {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* Navbar */
-.navbar {
-    background-color: #007bff;
-    padding: 10px 20px;
-}
-
-.navbar .navbar-brand,
-.navbar .nav-link {
-    color: white !important;
-}
-
-.navbar .nav-link:hover {
-    text-decoration: underline;
+  /* Secondary Color Palette */
+  --button-color: #1ABC9C;
+  --button-hover: #1F7A6D;
+  --highlight-color: #FFFFFF;
 }

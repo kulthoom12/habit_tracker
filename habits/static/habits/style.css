@@ -3,22 +3,25 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* space between navbar and content */
 .content {
     padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-/* habits items */
-ul.habits-list {
-    list-style-type: none;
-    padding: 0;
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
 }
-li.habits-item {
-    margin-bottom: 10px; 
-    display: flex; 
-    justify-content: space-between;
-    align-items: center; 
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important;
 }
-.habits-checkbox {
-    display: flex;
-    align-items: center;
+
+.navbar .nav-link:hover {
+    text-decoration: underline;
 }

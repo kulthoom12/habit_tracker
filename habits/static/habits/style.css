@@ -8,3 +8,18 @@
   --button-hover: #1F7A6D;
   --highlight-color: #FFFFFF;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  padding: 0 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

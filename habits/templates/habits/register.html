@@ -1,0 +1,13 @@
+{% extends "habits/base.html" %}
+{% block title %}Register - Habit Tracker{% endblock %}
+
+{% block content %}
+<h2>Create an Account</h2>
+<form method="POST">
+  {% csrf_token %}
+
+  {% if form.non_field_errors %}
+  <div class="alert alert-danger"></div>
+  {{ form.non_field_errors }}
+  </div>
+  {% endif %}

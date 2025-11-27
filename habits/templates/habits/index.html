@@ -15,7 +15,7 @@
 
   <li class="habits-item">
     <!--checklist-->
-    <label class="habits-checkbox"> <!-- Changed from habit-checkbox to habits-checkbox -->
+    <label class="habits-checkbox"> 
       <input type="checkbox" id="habits-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}>
       <span class="{% if habit.completed_today %}completed{% endif %}">{{ habit.title }}</span>
     </label>

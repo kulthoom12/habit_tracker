@@ -7,9 +7,9 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     
     # Habit Views
-    path('habits/', views.habits_list, name='habits_list'),
-    path('habits/add/', views.habit_form, name='add_habit'),
-    path('habits/edit/<int:pk>/', views.habit_form, name='edit_habit'),
-    path('habits/delete/<int:pk>/', views.habits_delete, name='delete_habit'),
-    path('habits/clear_completed/', views.habits_clear_completed, name='clear_completed_habits'),
+    path('', views.habits_list, name='home'),  # Set this as the home page
+    path('habits/add/', views.habit_form, name='habits_create'),
+    path('habits/edit/<int:pk>/', views.habit_form, name='habits_update'),
+    path('habits/delete/<int:pk>/', views.habits_delete, name='habits_delete'),
+    path('habits/clear_completed/', views.habits_clear_completed, name='habits_clear_completed'),
 ]

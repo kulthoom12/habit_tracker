@@ -6,25 +6,28 @@
 <h2>Your habits</h2>
 
 <!-- Add Habit Button -->
-<a href="{% url 'habits_create' %}" class="btn btn-success mb-3">Add Habit</a>
+<a href="{% url 'habits_create' %}" class="btn btn-success mb-3" aria-label="Add a new habit">Add Habit</a>
 
 <!-- Habits list -->
 {% if habits %}
 <ul class="habits-list">
   {% for habit in habits %}
-
   <li class="habits-item">
+
     <!--checklist-->
-    <label class="habits-checkbox"> 
-      <input type="checkbox" id="habits-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}>
+    <label class="habits-checkbox" aria-label="Mark habit as completed">
+      <input type="checkbox" id="habits-{{ habit.id }}" {% if habit.completed_today %}checked{% endif %}
+        aria-checked="{% if habit.completed_today %}true{% else %}false{% endif %}">
       <span class="{% if habit.completed_today %}completed{% endif %}">{{ habit.title }}</span>
     </label>
 
     <!-- Edit Habit -->
-    <a href="{% url 'habits_update' habit.pk %}" class="btn btn-primary btn-sm">Edit</a>
+    <a href="{% url 'habits_update' habit.pk %}" class="btn btn-primary btn-sm"
+      aria-label="Edit habit: {{ habit.title }}">Edit</a>
 
     <!-- Delete Habit-->
-    <a href="{% url 'habits_delete' habit.pk %}">class= class="btn btn-danger btn-sm delete</a>
+    <a href="{% url 'habits_delete' habit.pk %}" class="btn btn-danger btn-sm"
+      aria-label="Delete habit: {{ habit.title }}">Delete</a>
   </li>
   {% endfor %}
 </ul>
@@ -32,6 +35,7 @@
 <p>No habits yet! <a href="{% url 'habits_create' %}">Add a habit</a></p>
 {% endif %}
 <!-- Clear Habits Button -->
-<a href="{% url 'habits_clear_completed' %}">Clear Completed Habits</a>
+<a href="{% url 'habits_clear_completed' %}" class="btn btn-warning" aria-label="Clear all completed habits">Clear
+  Completed Habits</a>
 
 {% endblock %}

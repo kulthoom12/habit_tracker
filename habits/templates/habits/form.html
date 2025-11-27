@@ -6,38 +6,38 @@
 <h2>{% if habit %}Edit Habit{% else %}Add New Habit{% endif %}</h2>
 
 <form method="POST">
-
   {% csrf_token %}
   
   <!-- Habit Title -->
   <div class="mb-3">
     <label for="habits-title" class="form-label">Habit Title</label>
-    <input type="text" name="title" id="habits-title" class="form-control" value="{{ habit.title if habit else '' }}"
-      required>
+    <input type="text" name="title" id="habits-title" class="form-control" 
+           value="{{ habit.title|default:'' }}" required>
   </div>
 
   <!-- Habit Description -->
   <div class="mb-3">
     <label for="habits-description" class="form-label">Description</label>
-    <textarea name="description" id="habits-description" class="form-control"
-      required>{{ habit.description if habit else '' }}</textarea>
+    <textarea name="description" id="habits-description" class="form-control" required>
+      {{ habit.description|default:'' }}
+    </textarea>
   </div>
 
   <!-- Habit Frequency -->
   <div class="mb-3">
     <label for="habits-frequency" class="form-label">Frequency</label>
     <select name="frequency" id="habits-frequency" class="form-control" required>
-      <option value="daily" {% if habit and habit.frequency=='daily' %}selected{% endif %}>Daily</option>
-      <option value="weekly" {% if habit and habit.frequency=='weekly' %}selected{% endif %}>Weekly</option>
-      <option value="monthly" {% if habit and habit.frequency=='monthly' %}selected{% endif %}>Monthly</option>
+      <option value="daily" {% if habit and habit.frequency == 'daily' %}selected{% endif %}>Daily</option>
+      <option value="weekly" {% if habit and habit.frequency == 'weekly' %}selected{% endif %}>Weekly</option>
+      <option value="monthly" {% if habit and habit.frequency == 'monthly' %}selected{% endif %}>Monthly</option>
     </select>
   </div>
 
   <!-- Completed Today -->
   <div class="form-check">
-    <input type="checkbox" name="completed_today" id="habits-completed" class="form-check-input" {% if habit and
-      habit.completed_today %}checked{% endif %}>
-    <label for="habits-completed" class="form-check-label">Completed Today </label>
+    <input type="checkbox" name="completed_today" id="habits-completed" class="form-check-input" 
+           {% if habit and habit.completed_today %}checked{% endif %}>
+    <label for="habits-completed" class="form-check-label">Completed Today</label>
   </div>
 
   <!-- Submit Button -->

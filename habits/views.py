@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import HabitForm
@@ -24,7 +24,6 @@ def register(request):
                 request, "There was an error with your registration.")
     else:
         form = UserCreationForm()
-
     return render(request, "habits/register.html", {"form": form})
 
 # Login View
@@ -42,22 +41,22 @@ def login_view(request):
             messages.error(request, "Invalid login credentials.")
     else:
         form = AuthenticationForm()
-
     return render(request, "habits/login.html", {"form": form})
 
 # Habit List View (Home Page)
 
 
 @login_required
-def habits_list(request):
-    habits = Habit.objects.filter(user=request.user)
+def home(request):
+    """Display all habits for the logged-in user."""
+    habits = Habit.objects.filter(user=request.user).order_by('-id')
     return render(request, "habits/index.html", {"habits": habits})
 
 
 @login_required
 def habit_form(request, pk=None):
+    """Create a new habit or update an existing one."""
     habit = None
-
     if pk:
         habit = get_object_or_404(Habit, id=pk, user=request.user)
 
@@ -67,7 +66,6 @@ def habit_form(request, pk=None):
             habit = form.save(commit=False)
             habit.user = request.user
 
-            # Update streak based on 'completed_today' value
             habit.update_streak()
             habit.save()
             messages.success(request, "Habit saved successfully.")

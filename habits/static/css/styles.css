@@ -37,6 +37,11 @@ body {
   font-size: 18px;
 }
 
+.completed {
+  text-decoration: line-through;
+  color: #909090
+}
+
 .custom-add-habit-btn {
   text-align: center;
   color: aqua;

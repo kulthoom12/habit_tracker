@@ -1,18 +1,7 @@
 :root {
-  /* Primary Color Palette */
-  --background-color: #FAD0C9;
-  --text-color: #2C3E50;
-
-  /* Secondary Color Palette */
-  --button-color: #1ABC9C;
-  --button-hover: #1F7A6D;
-  --highlight-color: #FFFFFF;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --primary: #8367C7;
+  --secondary: #2FA8A0;
+  --accent: #E86A92;
 }
 
 body {
@@ -25,25 +14,31 @@ body {
   flex-direction: column;
 }
 
-h1 {
-  text-align: center;
-  color: var(--primary-text-color);
-  margin-bottom: 20px;
-}
-
-h2 {
-  color var(--primary-text-color);
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-/* Form Styling */
-form {
-  background-color: var(--secondary-bg-color);
+body {
   padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 480px;
-  margin: 20px auto;
+}
+
+.habits-list {
+  list-style: none;
+  padding: 0 margin-top:20px
+}
+
+.habits-item {
+  background: white;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+
+.habits-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+}
+
+.custom-add-habit-btn {
+  text-align: center;
+  color: aqua;
+  margin-bottom: 20px;
 }

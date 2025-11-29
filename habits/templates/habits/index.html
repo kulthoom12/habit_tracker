@@ -3,29 +3,43 @@
 {% block title %}Home - Habit Tracker{% endblock %}
 
 {% block content %}
-<h2>Your habits</h2>
 
+<h2 class="text-center">Your habits</h2>
+
+{# Check if the user is logged in #}
 {% if user.is_authenticated %}
-    {% if habits %}
-        <a href="{% url 'habits_create' %}" class="btn btn-success mb-3">Add Habit</a>
-        <ul class="habits-list">
+
+{# Habit Button #}
+  <a href="{% url 'habits_create' %}" class="btn btn-success mb-3">Add Habit</a>
+
+{# Habits List #}
+<ul class="habits-list">
             {% for habit in habits %}
             <li class="habits-item">
-                <label class="habits-checkbox">
+
+    {# Checklist #}
+    <label class="habits-checkbox">
                     <input type="checkbox" {% if habit.completed_today %}checked{% endif %}>
-                    <span class="{% if habit.completed_today %}completed{% endif %}">{{ habit.title }}</span>
+                    <span class="{% if habit.completed_today %}completed{% endif %}">
+                        {{ habit.title }}
+                    </span>
                 </label>
-                <a href="{% url 'habits_update' habit.pk %}" class="btn btn-primary btn-sm">Edit</a>
-                <a href="{% url 'habits_delete' habit.pk %}" class="btn btn-danger btn-sm">Delete</a>
-            </li>
-            {% endfor %}
-        </ul>
-        <a href="{% url 'habits_clear_completed' %}" class="btn btn-warning mt-3">Clear Completed Habits</a>
-    {% else %}
-        <p>No habits yet! <a href="{% url 'habits_create' %}">Add a habit</a></p>
-    {% endif %}
+
+    {# Edit Button #}
+    <a href="{% url 'habits_update' habit.pk %}" class="btn btn-primary btn-sm custom-edit-btn"
+      aria-label="Edit habit: {{ habit.title }}">Edit</a>
+
+    {# Delete Button #}
+    <a href="{% url 'habits_delete' habit.pk %}" class="btn btn-danger btn-sm custom-delete-btn"
+      aria-label="Delete habit: {{ habit.title }}">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
 {% else %}
-    <p>Please <a href="{% url 'login' %}">log in</a> to manage your habits.</p>
+<p>No habits yet! <a href="{% url 'habits_create' %}">Add a habit</a></p>
 {% endif %}
 
+{# Clear Habits #}
+<a href="{% url 'habits_clear_completed' %}" class="btn btn-warning custom-clear-btn"
+  aria-label="Clear all completed habits">Clear Completed Habits</a>
 {% endblock %}

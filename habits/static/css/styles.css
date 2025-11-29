@@ -47,3 +47,31 @@ body {
   color: aqua;
   margin-bottom: 20px;
 }
+
+nav.navbar {
+  background-color: var(--primary);
+  color: white;
+}
+
+nav.navbar a.navbar-brand,
+nav.navbar a.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+btn-primary,
+.btn-danger {
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.custom-clear-btn {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+}

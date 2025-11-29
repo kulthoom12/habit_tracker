@@ -1,11 +1,5 @@
-# habits/settings.py
-
 from pathlib import Path
-import os
-from dotenv import load_dotenv  
-
-# Load .env file
-load_dotenv()
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,8 +10,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-secret-key-here')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(',')  
-
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -58,14 +51,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -82,17 +73,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static", 
+    BASE_DIR / "static",
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

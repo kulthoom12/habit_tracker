@@ -5,73 +5,84 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-  padding: 0 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  padding: 25px;
 }
 
-body {
-  padding: 25px;
+h1,
+h2 {
+  color: var(--primary);
 }
 
 .habits-list {
   list-style: none;
-  padding: 0 margin-top:20px
+  padding: 0;
+  margin-top: 20px;
 }
 
 .habits-item {
-  background: white;
-  padding: 15px;
-  margin-bottom: 12px;
-  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
 
-.habits-checkbox {
+.habits-item:last-child {
+  border-bottom: none;
+}
+
+.habit-info {
   display: flex;
-  gap: 10px;
   align-items: center;
-  font-size: 18px;
+  gap: 15px;
 }
 
 .completed {
   text-decoration: line-through;
-  color: #909090
+  color: #909090;
 }
 
-.custom-add-habit-btn {
-  text-align: center;
-  color: aqua;
+button,
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-add {
+  background-color: var(--secondary);
+  color: white;
   margin-bottom: 20px;
 }
 
-nav.navbar {
+.btn-edit {
   background-color: var(--primary);
   color: white;
 }
 
-nav.navbar a.navbar-brand,
-nav.navbar a.nav-link {
-  color: white;
-  text-decoration: none;
-}
-
-.content {
-  margin-top: 20px;
-}
-
-btn-primary,
-.btn-danger {
-  padding: 5px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
-.custom-clear-btn {
+.btn-delete {
   background-color: var(--accent);
   color: white;
-  border: none;
+}
+
+.habit-info input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .habits-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .habit-buttons {
+    display: flex;
+    gap: 10px;
+  }
 }

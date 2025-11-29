@@ -6,28 +6,19 @@ from django.contrib import messages
 from .forms import HabitForm
 from .models import Habit
 
-# Register View
-
-
 def register(request):
-    """Handles user registration."""
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(
-                request, "Registration successful! You are now logged in.")
+            messages.success(request, "Registration successful! You are now logged in.")
             return redirect('home')
         else:
-            messages.error(
-                request, "There was an error with your registration.")
+            messages.error(request, "There was an error with your registration.")
     else:
         form = UserCreationForm()
     return render(request, "habits/register.html", {"form": form})
-
-# Login View
-
 
 def login_view(request):
     if request.method == "POST":
@@ -43,19 +34,13 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, "habits/login.html", {"form": form})
 
-# Habit List View (Home Page)
-
-
 @login_required
 def home(request):
-    """Display all habits for the logged-in user."""
     habits = Habit.objects.filter(user=request.user).order_by('-id')
     return render(request, "habits/index.html", {"habits": habits})
 
-
 @login_required
 def habit_form(request, pk=None):
-    """Create a new habit or update an existing one."""
     habit = None
     if pk:
         habit = get_object_or_404(Habit, id=pk, user=request.user)
@@ -65,7 +50,6 @@ def habit_form(request, pk=None):
         if form.is_valid():
             habit = form.save(commit=False)
             habit.user = request.user
-
             habit.update_streak()
             habit.save()
             messages.success(request, "Habit saved successfully.")
@@ -77,18 +61,12 @@ def habit_form(request, pk=None):
 
     return render(request, "habits/form.html", {"form": form, "habit": habit})
 
-# Habit Delete View
-
-
 @login_required
 def habits_delete(request, pk):
     habit = get_object_or_404(Habit, id=pk, user=request.user)
     habit.delete()
     messages.success(request, "Habit deleted successfully.")
     return redirect("home")
-
-# Clear Completed Habits
-
 
 @login_required
 def habits_clear_completed(request):

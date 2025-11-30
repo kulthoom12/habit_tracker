@@ -8,11 +8,42 @@ This app is mainly made for people who want to build better routiens or just try
 
 
 ## User Stories
+  
+- As  a user, I want to register so I can create an account and start tracking habits.
+
+- As  a user, I want to login so I can access my personal d- As dashboard.
+
+- As  a user, I want to logout so my account stays secure.
+
+- As  a user, I want to create a habit so I can track my daily routines.
+
+- As  a user, I want to edit a habit to update its name or details.
+
+- As  a user, I want to delete a habit if I no longer need it.
+
+- As  a user, I want to mark a habit complete so I can track my progress.
 
 ## Wireframes
+<details>
+<summary>Click here to view  the  Mobile, Tablet and Desktop  Wireframes</summary>
+
+
 ### Mobile Wireframes
+
+Home Page:
+Login Page:
+
 ### Tablet Wireframes
+
+Home Page:
+Login Page:
+
 ### Desktop Wireframes
+
+Home Page:
+Login Page:
+
+</details>
 
 ### Features
 ###  Existing Features
@@ -77,13 +108,40 @@ Ends the sesson and redirects users to the login page.
 
 ###  Future  Features
 
+Habit Categrories
+
+- Group habbits by type (health, work, personal) to keep things orgnized.
+
+Dashboard Themes
+
+L- ight/dark mode or custom thems so users can pick what looks best.
+
+Password Reset
+
+- Users can resset forgotten passwords via an email link.
+
+Two-Factor Auth
+
+- Optional 2FA for extra securtiy at login.
 
 ## Tools & Technologies Used
+
 ## Credits
 
 
 
 ## Database and Relationship
+
+- The Habit Tracker app uses a relational databse.
+- Every user can have many habits. 
+- This is done by adding a foreign key in the Habit model: user = models.ForeignKey(User, on_delete=models.CASCADE).
+- Every habit belongs to one user only.
+- If a user is deletd, all of their habits get removed too, helping keep data integraty.
+- Each habit has properties like:
+
+  - title,  descrption,  frequency , whether it was completed today , streak count
+, date it was created,.
+This setup makes sure that data is stored consistantly and in a organized way., It also keeps the relationship between users and their habbits clear.
 
 ## Deployment
 

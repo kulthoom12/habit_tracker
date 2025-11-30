@@ -11,7 +11,6 @@ def redirect_to_login(request):
 urlpatterns = [
     path('', redirect_to_login, name='root'),
     path('home/', views.home, name='home'),
-
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
@@ -21,6 +20,4 @@ urlpatterns = [
     path('habits/delete/<int:pk>/', views.habits_delete, name='habits_delete'),
 
     path('habits/toggle/<int:pk>/', views.toggle_completed, name='habit_toggle'),
-
-    path('habits/clear_completed/', views.habits_clear_completed, name='habits_clear_completed'),
 ]

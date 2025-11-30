@@ -87,14 +87,3 @@ def toggle_completed(request, pk):
     habit.completed_today = not habit.completed_today
     habit.save()
     return redirect('home')
-
-
-@login_required
-def habits_clear_completed(request):
-    """
-    Reset all habits that were marked completed today.
-    Instead of deleting, just sets completed_today=False.
-    """
-    Habit.objects.filter(user=request.user, completed_today=True).update(completed_today=False)
-    messages.success(request, "Completed habits cleared successfully.")
-    return redirect("home")

@@ -19,6 +19,8 @@ urlpatterns = [
     path('habits/add/', views.habit_form, name='habits_create'),
     path('habits/edit/<int:pk>/', views.habit_form, name='habits_update'),
     path('habits/delete/<int:pk>/', views.habits_delete, name='habits_delete'),
-    path('habits/clear_completed/', views.habits_clear_completed,
-         name='habits_clear_completed'),
+
+    path('habits/toggle/<int:pk>/', views.toggle_completed, name='habit_toggle'),
+
+    path('habits/clear_completed/', views.habits_clear_completed, name='habits_clear_completed'),
 ]

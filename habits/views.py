@@ -19,12 +19,10 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(
-                request, "Registration successful! You are now logged in.")
+            messages.success(request, "Registration successful! You are now logged in.")
             return redirect('home')
         else:
-            messages.error(
-                request, "There was an error with your registration.")
+            messages.error(request, "There was an error with your registration.")
     else:
         form = UserCreationForm()
     return render(request, "habits/register.html", {"form": form})
@@ -45,11 +43,8 @@ def login_view(request):
     return render(request, "habits/login.html", {"form": form})
 
 
-#  login_required
 @login_required
 def home(request):
-    if not request.user.is_authenticated:
-        return redirect('login')
     habits = Habit.objects.filter(user=request.user).order_by('-id')
     return render(request, "habits/index.html", {"habits": habits})
 
@@ -63,9 +58,7 @@ def habit_form(request, pk=None):
         if form.is_valid():
             habit = form.save(commit=False)
             habit.user = request.user
-            # habit.update_streak()
             habit.save()
-
             messages.success(request, "Habit saved successfully.")
             return redirect("home")
         else:
@@ -85,7 +78,23 @@ def habits_delete(request, pk):
 
 
 @login_required
+def toggle_completed(request, pk):
+    """
+    Toggle the completed_today status of a habit.
+    Clicking a habit marks it completed (strike-through) or uncompleted.
+    """
+    habit = get_object_or_404(Habit, id=pk, user=request.user)
+    habit.completed_today = not habit.completed_today
+    habit.save()
+    return redirect('home')
+
+
+@login_required
 def habits_clear_completed(request):
-    Habit.objects.filter(user=request.user, completed_today=True).delete()
+    """
+    Reset all habits that were marked completed today.
+    Instead of deleting, just sets completed_today=False.
+    """
+    Habit.objects.filter(user=request.user, completed_today=True).update(completed_today=False)
     messages.success(request, "Completed habits cleared successfully.")
     return redirect("home")

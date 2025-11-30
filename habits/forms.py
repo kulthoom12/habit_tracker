@@ -4,7 +4,7 @@ from .models import Habit
 class HabitForm(forms.ModelForm):
     class Meta:
         model = Habit
-        fields = ['title', 'description', 'completed_today', 'frequency', 'streak']
+        fields = ['title', 'description', 'completed_today', 'frequency']
         
         widgets = {
             'title': forms.TextInput(attrs={

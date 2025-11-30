@@ -7,3 +7,24 @@ Habits Tracker is a web application made with Django that helps users keep track
 This app is mainly made for people who want to build better routiens or just try get more organised in thier day-to-day life. It works well for anyone who struggles keeping on top of habits, forgets what they planned to do, or just wants something simple to help keep them motivated. 
 
 
+## User Stories
+
+## Wireframes
+### Mobile Wireframes
+### Tablet Wireframes
+### Desktop Wireframes
+
+### Features
+###  Existing Features
+###  Future  Features
+
+
+## Tools & Technologies Used
+## Credits
+
+
+
+## Database and Relationship
+
+## Deployment
+

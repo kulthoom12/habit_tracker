@@ -26,9 +26,12 @@
           </li>
 
           {% if user.is_authenticated %}
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-    </li>
+          <li class="nav-item">
+            <form method="POST" action="{% url 'logout' %}" class="d-inline">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-link nav-link p-0">Logout</button>
+            </form>
+          </li>
 
 
           {% else %}
@@ -39,16 +42,13 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register' %}">Register</a>
           </li>
-        {% endif %}
-                </ul>
+          {% endif %}
+        </ul>
 
       </div>
     </div>
   </nav>
 
-  <p>DEBUG: user.is_authenticated = {{ user.is_authenticated }}</p>
-<p>DEBUG: user = {{ user }}</p>
- 
   {# Page Content #}
   <div class="content">
     {% block content %}

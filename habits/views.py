@@ -6,10 +6,11 @@ from django.contrib import messages
 from .forms import HabitForm
 from .models import Habit
 
-def redirect_to_login(request):  
-    if request.user.is_authenticated:  
-        return redirect('home') 
-    return redirect('login')  
+
+def redirect_to_login(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+    return redirect('login')
 
 
 def register(request):
@@ -48,23 +49,23 @@ def login_view(request):
 @login_required
 def home(request):
     if not request.user.is_authenticated:
-          return redirect('login')
+        return redirect('login')
     habits = Habit.objects.filter(user=request.user).order_by('-id')
     return render(request, "habits/index.html", {"habits": habits})
 
+
 @login_required
 def habit_form(request, pk=None):
-    habit = None
-    if pk:
-        habit = get_object_or_404(Habit, id=pk, user=request.user)
+    habit = get_object_or_404(Habit, id=pk, user=request.user) if pk else None
 
     if request.method == "POST":
         form = HabitForm(request.POST, instance=habit)
         if form.is_valid():
             habit = form.save(commit=False)
             habit.user = request.user
-            habit.update_streak()
+            # habit.update_streak()
             habit.save()
+
             messages.success(request, "Habit saved successfully.")
             return redirect("home")
         else:

@@ -126,8 +126,31 @@ Two-Factor Auth
 
 ## Tools & Technologies Used
 
-## Credits
+- https://www.w3schools.com/css/
+- https://www.w3schools.com/html/
+- https://www.w3schools.com/python/
+- https://getbootstrap.com/docs/5.0/getting-started/introduction/
+- https://www.djangoproject.com/
+- https://www.sqlite.org/
+- https://pypi.org/project/python-decouple/
+- https://docs.djangoproject.com/en/stable/topics/security/
+- http://whitenoise.evans.io/en/stable/
+- https://render.com/
+- https://github.com/
+- https://pip.pypa.io/
+- https://black.readthedocs.io/en/stable/
 
+## Credits
+- https://www.youtube.com/watch?v=-tyBEsHSv7w
+- https://www.youtube.com/watch?v=HyN51x01Ve8
+-  https://www.youtube.com/watch?v=uvISKB2ROrQ
+-  https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU
+-  https://www.youtube.com/watch?v=F5mRW0jo-U4
+-  https://www.youtube.com/watch?v=akXfF066MY0&t=20s
+- https://www.youtube.com/watch?v=H_cWdD-aXCQ
+- https://www.youtube.com/watch?v=nXe4mZs1hHQ
+- https://www.youtube.com/watch?v=qKS87S0Imsk
+-  https://www.youtube.com/watch?v=vzBFJ3WEvOQ
 
 
 ## Database and Relationship

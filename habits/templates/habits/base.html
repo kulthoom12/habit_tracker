@@ -14,7 +14,7 @@
   {# Navbar #}
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Habit Tracker</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Habit Tracker</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,16 +24,31 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Habits</a>
           </li>
+
+          {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+    </li>
+
+
+          {% else %}
+
           <li class="nav-item">
             <a class="nav-link" href="{% url 'login' %}">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register' %}">Register</a>
           </li>
-        </ul>
+        {% endif %}
+                </ul>
+
       </div>
     </div>
   </nav>
+
+  <p>DEBUG: user.is_authenticated = {{ user.is_authenticated }}</p>
+<p>DEBUG: user = {{ user }}</p>
+ 
   {# Page Content #}
   <div class="content">
     {% block content %}

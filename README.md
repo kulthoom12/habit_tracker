@@ -16,6 +16,23 @@ This app is mainly made for people who want to build better routiens or just try
 
 ### Features
 ###  Existing Features
+navbar:
+-The navbar shows up at the top of every page so ppl can find their way around easier.
+nav-links: 
+Home (where the list of habits is)
+Login / Register (only if the user isn’t signed in)
+Logout (only shown when the user is logged in)
+
+When someone logs in, the navbar “switches” so the login link switches to a logout button.
+
+On mobile screens the navbar collapses down into a lil hamburger menu thanks to Bootstrap’s responsive classes (so it doesn’t take up the whole screen).
+
+The logo/link of“Habit Tracker” always links back to the homepage.
+
+Desktop navbar
+![screenshot]()
+
+Mobile navbar ![screenshot]()
 ###  Future  Features
 
 

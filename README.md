@@ -24,25 +24,26 @@ This app is mainly made for people who want to build better routiens or just try
 - As  a user, I want to mark a habit complete so I can track my progress.
 
 ## Wireframes
-<details>
-<summary>Click here to view  the  Mobile, Tablet and Desktop  Wireframes</summary>
-
 
 ### Mobile Wireframes
 
-Home Page:
-Login Page:
+<details>
+<summary>Click here to view  the  Mobile  Wireframes</summary>
+<img src="habits/static/images-wireframes/phone-wireframe.png">
+</details>
 
 ### Tablet Wireframes
 
-Home Page:
-Login Page:
+<details>
+<summary>Click here to view  the Tablet  Wireframes</summary>
+<img src="habits/static/images-wireframes/tablet-wireframe.png">
+</details>
 
 ### Desktop Wireframes
 
-Home Page:
-Login Page:
-
+<details>
+<summary>Click here to view  the Tablet  Wireframes</summary>
+<img src="habits/static/images-wireframes/laptop-wireframe.png">
 </details>
 
 ### Features

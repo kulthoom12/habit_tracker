@@ -38,7 +38,9 @@
 
 </details>
 
-## Device Testing Screenshots
+## Device Testing 
+
+<details ><summary>Click here to view the Device Testing</summary>
 
 | Device | Screenshot |
 |--------|------------|
@@ -47,10 +49,6 @@
 | Laptop | ![Laptop Screenshot]() |
 
 </details>
-<details>
-<summary>Click here to view the User Story Testing</summary>
-
-| **User Story** | **Expected Outcome** | **Screenshot** |
 
 ## Lighthouse Audit
 
@@ -80,6 +78,12 @@
 ## Testing Existing Features
 
 <details>
+
+| **Lighthouse Audit** | **Screenshot** |
+|---------------------|----------------|
+| Mobile              | ![Mobile Screenshot]() |
+| Tablet              | ![Tablet Screenshot]() |
+| Laptop              | ![Laptop Screenshot]() |
 
 </details>
 

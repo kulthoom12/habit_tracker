@@ -1,15 +1,9 @@
 from django.urls import path
-from . import views
 from django.contrib.auth import views as auth_views
-from django.shortcuts import redirect
-
-
-def redirect_to_login(request):
-    return redirect('login')
-
+from . import views
 
 urlpatterns = [
-    path('', redirect_to_login, name='root'),
+    path('', views.home, name='root'),
     path('home/', views.home, name='home'),
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),

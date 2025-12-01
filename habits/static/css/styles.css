@@ -17,9 +17,10 @@ h2 {
 }
 
 .habits-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
+  align-items: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 1px solid;
 }
 
 .habits-item {
@@ -38,6 +39,12 @@ h2 {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.habit-buttons{
+ display: flex;
+  gap: 10px;*/
+  align-items: center; 
 }
 
 .completed {
@@ -61,6 +68,7 @@ button,
 }
 
 .btn-edit {
+  .custom-edit-btn
   background-color: var(--primary);
   color: white;
 }
@@ -72,6 +80,7 @@ button,
 
 .habit-info input[type="checkbox"] {
   transform: scale(1.2);
+  margin-right: 10px; 
 }
 
 @media (max-width: 600px) {

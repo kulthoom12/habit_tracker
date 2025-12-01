@@ -14,14 +14,30 @@
 ## Browser Compatibility
 
 <details>
-<summary>Click here to view the Browser Compatibility </summary>
+<summary>Click here to view the Browser Compatibility  or habit tracker</summary>
+
+| Browser          | Screenshot |
+|------------------|------------|
+| Chrome           | ![Chrome Screenshot](images/chrome.png) |
+| Opera            | ![Opera Screenshot](images/opera.png) |
+| Brave            | ![Brave Screenshot](images/brave.png) |
+| Mozilla Firefox  | ![Firefox Screenshot](images/firefox.png) |
 
 </details>
 
 ## Responsiveness
 
+
 <details>
-<summary>Click here to view the responsiveness</summary>
+<summary>Click here to view the responsiveness for habit tracker </summary>
+
+## Device Testing Screenshots
+
+| Device | Screenshot |
+|--------|------------|
+| Mobile | ![Mobile Screenshot](images/mobile.png) |
+| Tablet | ![Tablet Screenshot](images/tablet.png) |
+| Laptop | ![Laptop Screenshot](images/laptop.png) |
 
 </details>
 

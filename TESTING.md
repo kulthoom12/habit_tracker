@@ -111,15 +111,31 @@
 <details>
 <summary>Click here to view the CRUD  Tests</summary>
 
+| **Action** | **What User Does** | **Screenshot** |
+|------------|---------------------------|----------------|
+| Create     | User fill in habbit form and click submit to add new habbit | ![Create Screenshot]() |
+| Edit       | User select existng habbit, update info and open edit form | ![Edit Screenshot]() |
+| Save       | User edit habbit and click save to update it in databse | ![Save Screenshot]() |
+| Delete     | User click delete buton next to habbit to remove it | ![Delete Screenshot]() |
+| Toggle     | User click "Completed Today" checkbok to mark habbit done/undone | ![Toggle Screenshot]() |
+
 </details>
 
 ## Bugs
 
 <details>
-<summary>Click here to view the Bugs </summary>
+<summary>Click here to view Bugs </summary>
 
+| file     |  / What was wrong | How it was fixed |
+|----------------|--------------------|-----------------|
+| form.html      | Django cudnt understnd the if habit else in input fields. Form broked. | Changed code so input fields only show habit info if it exists. If no habit, fields stay empty. |
+| index.html     | {% endblock %} gave error. Template tag maybe wrong or not inherited. | Fixed template so it extends base template proper and all {% block %} tags closed. |
+| homepage.html  | Habits not showing. {% if habits %} not working or view didnt pass habits. | Made sure view sends habits to template and loop show them correctly. |
+| base.html      | Django cudnt find URL pattern named task_create. | Added URL in urls.py called task_create to link to right view. |
+| init__.py    | Django expected number but got SimpleLazyObject (AnonymousUser). Crash happend. | Added check so code only use user info if logged in. Anonymous users dont break it. |
 
 </details>
+
 
 ## Unfixed Bugs
 <details>

@@ -127,32 +127,46 @@ Two-Factor Auth
 
 ## Tools & Technologies Used
 
-- https://www.w3schools.com/css/
-- https://www.w3schools.com/html/
-- https://www.w3schools.com/python/
-- https://getbootstrap.com/docs/5.0/getting-started/introduction/
-- https://www.djangoproject.com/
-- https://www.sqlite.org/
-- https://pypi.org/project/python-decouple/
-- https://docs.djangoproject.com/en/stable/topics/security/
-- http://whitenoise.evans.io/en/stable/
-- https://render.com/
-- https://github.com/
-- https://pip.pypa.io/
-- https://black.readthedocs.io/en/stable/
+<details>
+<summary>Click here to view the tools and technologies used table</summary>
+
+| **Source**                  | **Link** |
+|-----------------------------|----------|
+| W3Schools - CSS             | [https://www.w3schools.com/css/](https://www.w3schools.com/css/) |
+| W3Schools - HTML            | [https://www.w3schools.com/html/](https://www.w3schools.com/html/) |
+| W3Schools - Python          | [https://www.w3schools.com/python/](https://www.w3schools.com/python/) |
+| Bootstrap Docs              | [https://getbootstrap.com/docs/5.0/getting-started/introduction/](https://getbootstrap.com/docs/5.0/getting-started/introduction/) |
+| Django Official Website     | [https://www.djangoproject.com/](https://www.djangoproject.com/) |
+| SQLite Docs                 | [https://www.sqlite.org/](https://www.sqlite.org/) |
+| Python Decouple             | [https://pypi.org/project/python-decouple/](https://pypi.org/project/python-decouple/) |
+| Django Security             | [https://docs.djangoproject.com/en/stable/topics/security/](https://docs.djangoproject.com/en/stable/topics/security/) |
+| Whitenoise Docs             | [http://whitenoise.evans.io/en/stable/](http://whitenoise.evans.io/en/stable/) |
+| Render Platform             | [https://render.com/](https://render.com/) |
+| GitHub                      | [https://github.com/](https://github.com/) |
+| PyPI (Python Package Index) | [https://pip.pypa.io/](https://pip.pypa.io/) |
+| Black Python Formatter      | [https://black.readthedocs.io/en/stable/](https://black.readthedocs.io/en/stable/) |
+
+</details>
 
 ## Credits
-- https://www.youtube.com/watch?v=-tyBEsHSv7w
-- https://www.youtube.com/watch?v=HyN51x01Ve8
--  https://www.youtube.com/watch?v=uvISKB2ROrQ
--  https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU
--  https://www.youtube.com/watch?v=F5mRW0jo-U4
--  https://www.youtube.com/watch?v=akXfF066MY0&t=20s
-- https://www.youtube.com/watch?v=H_cWdD-aXCQ
-- https://www.youtube.com/watch?v=nXe4mZs1hHQ
-- https://www.youtube.com/watch?v=qKS87S0Imsk
--  https://www.youtube.com/watch?v=vzBFJ3WEvOQ
 
+<details>
+<summary>Click here to view the credits table</summary>
+
+| **Video**                                            | **Link** |
+|------------------------------------------------------|----------|
+| Django Tutorial - Full Course (FreeCodeCamp)         | [Watch here](https://www.youtube.com/watch?v=-tyBEsHSv7w) |
+| Django for Beginners (Traversy Media)                | [Watch here](https://www.youtube.com/watch?v=HyN51x01Ve8) |
+| Django Tutorial for Beginners (Tech With Tim)        | [Watch here](https://www.youtube.com/watch?v=uvISKB2ROrQ) |
+| Django Full Course Playlist (Programming with Mosh)  | [Watch here](https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU) |
+| Django Forms Tutorial (Corey Schafer)                | [Watch here](https://www.youtube.com/watch?v=F5mRW0jo-U4) |
+| Django Deployment with Heroku (Tech With Tim)        | [Watch here](https://www.youtube.com/watch?v=akXfF066MY0&t=20s) |
+| Django Tutorial - Building a Blog (Python Engineer)  | [Watch here](https://www.youtube.com/watch?v=H_cWdD-aXCQ) |
+| Django and Vue.js Tutorial (freeCodeCamp)            | [Watch here](https://www.youtube.com/watch?v=nXe4mZs1hHQ) |
+| Django Authentication Tutorial (Tech With Tim)       | [Watch here](https://www.youtube.com/watch?v=qKS87S0Imsk) |
+| Django API Tutorial (Real Python)                    | [Watch here](https://www.youtube.com/watch?v=vzBFJ3WEvOQ) |
+
+</details>
 
 ## Database and Relationship
 

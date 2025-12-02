@@ -23,14 +23,15 @@
 ## Browser Performance
 
 <details>
-<summary>Click here to view the Browser Compatibility  or habit tracker</summary>
+<summary>Brave </summary>
 
-| Browser          | Screenshot |
-|------------------|------------|
-| Chrome           | ![Chrome Screenshot]() |
-| Opera            | ![Opera Screenshot]() |
-| Brave            | ![Brave Screenshot]() |
-| Mozilla Firefox  | ![Firefox Screenshot]() |
+| Page | Screenshot |
+|------|------------|
+| Login Page | ![](habits/static/images-testing/brave-login.png) |
+| Register Page | ![]() |
+| Save Habit Page | ![](habits/static/images-testing/brave-save.png) |
+| Edit/Delete Habit Page | ![](habits/static/images-testing/brave-edit-delete.png) |
+| Habit List Page | ![]() |
 
 </details>
 

@@ -92,7 +92,7 @@
 | **Lighthouse Audit** | **Screenshot** |
 |---------------------|----------------|
 | Mobile              | ![Mobile Screenshot](habits/static/images-testing/lighthouse-mobile.png) |
-| Laptop              | ![Laptop Screenshot](habits\static\images-testing\lighthouse-desktop.png) |
+| Laptop              | ![Laptop Screenshot](habits/staticimages-testing/lighthouse-desktop.png) |
 
 </details>
 

@@ -78,9 +78,9 @@
 
 | Responsiveness          | Screenshot |
 |-----------------|------------|
-| Mobile          | ![Mobile Screenshot]() |
-| Tablet          | ![Tablet Screenshot]() |
-| Laptop / Desktop| ![Laptop Screenshot]() |
+| Mobile          | ![Mobile Screenshot](habits/static/images-testing/responsivness-mobile.png) |
+| Tablet          | ![Tablet Screenshot](habits/static/images-testing/responsivness-tablet.png) |
+| Laptop / Desktop| ![Laptop Screenshot](habits/static/images-testing/responsivness-laptop.png) |
 
 </details>
 
@@ -103,9 +103,8 @@
 
 | **Lighthouse Audit** | **Screenshot** |
 |---------------------|----------------|
-| Mobile              | ![Mobile Screenshot]() |
-| Tablet              | ![Tablet Screenshot]() |
-| Laptop              | ![Laptop Screenshot]() |
+| Mobile              | ![Mobile Screenshot](habits/static/images-testing/lighthouse-mobile.png) |
+| Laptop              | ![Laptop Screenshot](habits\static\images-testing\lighthouse-desktop.png) |
 
 </details>
 

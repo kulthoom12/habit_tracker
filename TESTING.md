@@ -23,17 +23,53 @@
 ## Browser Performance
 
 <details>
-<summary>Brave </summary>
+<summary>Brave</summary>
 
 | Page | Screenshot |
 |------|------------|
-| Login Page | ![](habits/static/images-testing/brave-login.png) |
-| Register Page | ![]() |
-| Save Habit Page | ![](habits/static/images-testing/brave-save.png) |
-| Edit/Delete Habit Page | ![](habits/static/images-testing/brave-edit-delete.png) |
-| Habit List Page | ![]() |
+| Login  | ![](habits/static/images-testing/brave-login.png) |
+| Register  | ![]() |
+| Save Habit  | ![](habits/static/images-testing/brave-save.png) |
+| Edit/Delete   | ![](habits/static/images-testing/brave-edit-delete.png) |
 
 </details>
+
+<details>
+<summary>Chrome</summary>
+
+| Page | Screenshot |
+|------|------------|
+| Login | ![](habits/static/images-testing/chrome-login.png) |
+| Register  | ![]() |
+| Save Habit  | ![](habits/static/images-testing/chrome-save.png) |
+| Edit/Delete Habit  | ![](habits/static/images-testing/chrome-edit-delete.png) |
+
+</details>
+
+<details>
+<summary>Opera</summary>
+
+| Page | Screenshot |
+|------|------------|
+| Login  | ![](habits/static/images-testing/opera-login.png) |
+| Register  | ![]() |
+| Save Habit  | ![](habits/static/images-testing/opera-save.png) |
+| Edit/Delete Habit  | ![](habits/static/images-testing/opera-edit-delete.png) |
+
+</details>
+
+<details>
+<summary>Mozilla</summary>
+
+| Page | Screenshot |
+|------|------------|
+| Login  | ![](habits/static/images-testing/mozilla-login.png) |
+| Register  | ![]() |
+| Save Habit  | ![](habits/static/images-testing/mozilla-save.png) |
+| Edit/Delete Habit  | ![](habits/static/images-testing/mozilla-edit-delete.png) |
+
+</details>
+
 
 ## Responsiveness
 

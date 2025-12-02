@@ -16,7 +16,7 @@
 
 | **PAGE** | **Before** | **After** |
 |----------|------------|-----------|
-| CSS     | ![Before Screenshot]() | ![After Screenshot]() |
+| CSS     | ![Before Screenshot](habits/static/images-testing/css-before.png) | ![After Screenshot](habits/static/images-testing/css-after.png) |
 
 </details>
 
@@ -83,17 +83,6 @@
 
 </details>
 
-## Device Testing 
-
-<details ><summary>Click here to view the Device Testing</summary>
-
-| Device | Screenshot |
-|--------|------------|
-| Mobile | ![Mobile Screenshot]() |
-| Tablet | ![Tablet Screenshot]() |
-| Laptop | ![Laptop Screenshot]() |
-
-</details>
 
 ## Lighthouse Audit
 

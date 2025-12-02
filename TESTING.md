@@ -120,13 +120,13 @@
 
 | **features** | **what  was tested** | **Screenshot** |
 |--------------------------------|-------------------|----------------|
-| Navbar                        | User click links in navabr to go pages                   | ![Navbar Screenshot]() |
-| Homepage                      | User open home page                                       | ![Homepage Screenshot]() |
-| Edit Page                      | User change habbit info and click save                   | ![Editpage Screenshot]() |
-| Delete Button                  | User click delete next to habbit                           | ![Delete Screenshot]() |
-| Login                          | User enter email and pass to login                        | ![Login Screenshot]() |
-| Register                       | User fill register form                                    | ![Register Screenshot]() |
-| Logout                         | User click logout                                          | ![Logout Screenshot]() |
+| Navbar                        | User click links in navabr to go pages                   | ![Navbar Screenshot](habits/static/images-testing/existing-navbar.png) |
+| Homepage                      | User open home page                                       | ![Homepage Screenshot](habits/static/images-testing/existing-home.png) |
+| Edit                       | User change habbit info and click save                   | ![Editpage Screenshot](habits/static/images-testing/existing-edit.png) |
+| Delete Button                  | User click delete next to habbit                           | ![Delete Screenshot](habits/static/images-testing/existing-delete.png) |
+| Login                          | User enter email and pass to login                        | ![Login Screenshot](habits/static/images-testing/user-testing-login.png) |
+| Register                       | User fill register form                                    | ![Register Screenshot](habits/static/images-testing/existing-register.png) |
+| Logout                         | User click logout                                          | ![Logout Screenshot](habits/static/images-testing/user-testing-logout.png) |
 
 </details>
 

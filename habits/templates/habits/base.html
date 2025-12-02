@@ -1,3 +1,5 @@
+{# base.html #}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +53,8 @@
         {% block content %}
         <form>
             <label for="frequency">Frequency:</label>
-            <select name="frequency" id="frequency" required class="form-select">
-                <option value="" disabled selected>Select frequency</option>
+            <select name="frequency" id="frequency" required class="form-select" size="4">
+                <option value="" disabled selected placeholder="select frequency"></option>
                 <option value="daily">Daily</option>
                 <option value="weekly">Weekly</option>
                 <option value="monthly">Monthly</option>

@@ -162,7 +162,5 @@
 
 
 ## Unfixed Bugs
-<details>
-<summary>Click here to view the unfixed Bugs </summary>
 
-</details>
+No bugs found to my knowledge.

@@ -53,14 +53,12 @@
         {% block content %}
         <form>
             <label for="frequency">Frequency:</label>
-            <select name="frequency" id="frequency" required class="form-select" size="4">
-                <option value="" disabled selected placeholder="select frequency"></option>
-            <select name="frequency" id="frequency" required class="form-select" size="4">
-                <option value="" disabled selected placeholder="select frequency"></option>
-                <option value="daily">Daily</option>
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-            </select>
+                <select name="frequency" id="habits-frequency" required class="form-select" size="4">
+        <option value="" disabled {% if not habit %}selected{% endif %}>Select frequency</option>
+        <option value="daily" {% if habit and habit.frequency == 'daily' %}selected{% endif %}>Daily</option>
+        <option value="weekly" {% if habit and habit.frequency == 'weekly' %}selected{% endif %}>Weekly</option>
+        <option value="monthly" {% if habit and habit.frequency == 'monthly' %}selected{% endif %}>Monthly</option>
+    </select>
         </form>
         {% endblock %}
     </div>

@@ -114,12 +114,12 @@
 
 | **User Story** | **Testisting** | **Screenshot** |
 |----------------|--------------------|----------------|
-| As a user I want to regster so I can make acccount and start track my habbits. | The user fill in the registrtion form (`register.html`) and make an acccount. If succes, user is loged in and redirect to dashbord (`home`). Shows erros if somthing wrong. | ![Register Screenshot]() |
-| As a user I want to logn so I can go to my dashbord. | User put credentails in login form (`login.html`). If correct, user go to dashbord. Wrong credentails show erro. | ![Login Screenshot]() |
-| As a user I want to logout so my acccount stay safe. | User click logout buton in navbr. Session ends and user go back to login page. | ![Logout Screenshot]() |
-| As a user I want create a habbit to track my daily rutines. | User fill habbit form (`form.html`) with titel, descripton, frequncy and done status. Habbit save in databse and show in dashbord. | ![Create Habit Screenshot]() |
-| As a user I want edit a habbit to change name or info. | User edit existng habbit and change detals. Save changes in datbase and show in dashbord. | ![Edit Habit Screenshot]() |
-| As a user I want delete a habbit if I dont need it. | User click delete buton next to habbit. Habbit removed from databse and gone from dashbord. | ![Delete Habit Screenshot]() |
+| As a user I want to regster so I can make acccount and start track my habbits. | The user fill in the registrtion form (`register.html`) and make an acccount. If succes, user is loged in and redirect to dashbord (`home`). Shows erros if somthing wrong. | ![Register Screenshot](habits/static/images-testing/user-testing-register.png) |
+| As a user I want to logn so I can go to my dashbord. | User put credentails in login form (`login.html`). If correct, user go to dashbord. Wrong credentails show erro. | ![Login Screenshot](habits/static/images-testing/user-testing-login.png) |
+| As a user I want to logout so my acccount stay safe. | User click logout buton in navbr. Session ends and user go back to login page. | ![Logout Screenshot](habits/static/images-testing/user-testing-logout.png) |
+| As a user I want create a habbit to track my daily rutines. | User fill habbit form (`form.html`) with titel, descripton, frequncy and done status. Habbit save in databse and show in dashbord. | ![Create Habit Screenshot](habits/static/images-testing/user-testing-add.png) |
+| As a user I want edit a habbit to change name or info. | User edit existng habbit and change detals. Save changes in datbase and show in dashbord. | ![Edit Habit Screenshot](habits/static/images-testing/user-testing-edit-habit.png) |
+| As a user I want delete a habbit if I dont need it. | User click delete buton next to habbit. Habbit removed from databse and gone from dashbord. | ![Delete Habit Screenshot](habits/static/images-testing/user-testing-edit-delete.png) |
 
 </details>
 

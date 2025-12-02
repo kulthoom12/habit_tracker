@@ -1,13 +1,16 @@
 ### HTML Validator
 
 <details>
-<summary>Click here to view the HTML  Validator  </summary>
+<summary>Click here to view the HTML Validator</summary>
 
-| **PAGE** | **Before** | **After** |
-|----------|------------|-----------|
-| HTML     | ![Before Screenshot]() | ![After Screenshot]() |
+| **PAGE**       | **Before** | **After** |
+|----------------|------------|-----------|
+| login.html     | ![Before Screenshot](habits/static/images-testing/html-login.png) | No change |
+| form.html      | ![Before Screenshot](habits/static/images-testing/html-form-before.png) | ![After Screenshot](habits/static/images-testing/html-form-after.png) |
+| register.html  | ![Before Screenshot](habits/static/images-testing/html-register.png) | ![After Screenshot](habits/static/images-testing/html-register-after.png) |
 
 </details>
+
 
 ### CSS Validator
 

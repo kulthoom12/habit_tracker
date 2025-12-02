@@ -62,7 +62,7 @@ On mobile screens the navbar collapses down into a lil hamburger menu thanks to 
 The logo/link of“Habit Tracker” always links back to the homepage.
 
 Desktop navbar
-![screenshot](navbar)
+![screenshot](habits/static/images-testing/readme-navbar.png)
 
 #### home page
 This page shows all the habits for the user who’s currently logged in n is responsive
@@ -76,7 +76,7 @@ and an add Habit” button so users can quickly add a new habit.
 
 #### EDIT Page
 edit page allowing users to add a title, description frewuency and a completed today checkbox. submitting the form saves hbaut to user acc  directing them to homw page/ 
-![screenshot](editopage)
+![screenshot](habits/static/images-testing/readme-edit.png)
 
 #### delete button
 Users may delte habits from the home page via a red delete buton.
@@ -104,8 +104,6 @@ Provides error feedbak for incorect credentials
 Logout
 
 Ends the sesson and redirects users to the login page.
-
-
 
 ###  Future  Features
 
@@ -183,3 +181,38 @@ This setup makes sure that data is stored consistantly and in a organized way., 
 
 ## Deployment
 
+- The project is hosted on **Render**.  
+- Render automatically installs all dependencies from `requirements.txt`.  
+- The app runs using Render’s default Python web service settings.  
+- Environment variables (e.g., `SECRET_KEY`, `DEBUG`) are configured in the Render dashboard.  
+- Live site link: 
+
+## Local deployment 
+
+- Clone the repository  
+  * git clone  https://github.com/your-username/your-project.git
+
+- Change directory  
+  * cd your-project
+
+- Create a virtual environment:
+  * **Windows:** python -m venv venv and then venv\Scripts\activate
+  * **Mac/Linux:** python3 -m venv venv and then source venv/bin/activate
+
+- Install dependencies  
+  * pip install -r requirements.txt
+
+- Apply migrations  
+  * python manage.py migrate
+
+- Run the server  
+  * python manage.py runserver
+
+- Open the link displayed in the terminal
+
+## Forking the Repository
+
+- Go to the repository on GitHub.  
+- Click the **Fork** button in the top-right corner.  
+- Select **Create Fork** and rename if desired.  
+- Your forked copy will appear in your GitHub account.

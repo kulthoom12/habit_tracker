@@ -12,7 +12,7 @@ DEBUG = config('DJANGO_DEBUG', default=True, cast=bool)
 
 
 ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS',
-                       default='127.0.0.1,localhost').split(',')
+                       default='127.0.0.1,localhost,.onrender.com').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -81,6 +81,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

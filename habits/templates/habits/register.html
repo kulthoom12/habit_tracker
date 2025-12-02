@@ -5,12 +5,13 @@
 
 {% block content %}
 <h2>Create an Account</h2>
+
 <form method="POST">
   {% csrf_token %}
 
   {% if form.non_field_errors %}
-  <div class="alert alert-danger"></div>
-  {{ form.non_field_errors }}
+  <div class="alert alert-danger">
+    {{ form.non_field_errors }}
   </div>
   {% endif %}
 
@@ -18,7 +19,7 @@
   <div class="mb-3">
 
     {# Field Label #}
-    <label class="form-label">{{ field.label }}</label>
+    <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
 
     {# Input Field #}
     {{ field }}
@@ -29,6 +30,12 @@
     </div>
     {% endif %}
 
+    {% if field.help_text %}
+    <small id="{{ field.id_for_label }}_helptext" class="form-text text-muted">
+      {{ field.help_text }}
+    </small>
+    {% endif %}
+
   </div>
   {% endfor %}
 
@@ -36,7 +43,7 @@
   <button type="submit" class="btn btn-success">Register</button>
 </form>
 
-{#Link to Login Page #}
+{# Link to Login Page #}
 <p class="mt-3">
   Already have an account?
   <a href="{% url 'login' %}">Login here</a>

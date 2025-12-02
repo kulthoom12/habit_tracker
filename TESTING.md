@@ -28,7 +28,7 @@
 | Page | Screenshot |
 |------|------------|
 | Login  | ![](habits/static/images-testing/brave-login.png) |
-| Register  | ![]() |
+| Register  | ![](habits/static/images-testing/brave-register.png) |
 | Save Habit  | ![](habits/static/images-testing/brave-save.png) |
 | Edit/Delete   | ![](habits/static/images-testing/brave-edit-delete.png) |
 
@@ -40,7 +40,7 @@
 | Page | Screenshot |
 |------|------------|
 | Login | ![](habits/static/images-testing/chrome-login.png) |
-| Register  | ![]() |
+| Register  | ![](habits/static/images-testing/chrome-register.png) |
 | Save Habit  | ![](habits/static/images-testing/chrome-save.png) |
 | Edit/Delete Habit  | ![](habits/static/images-testing/chrome-edit-delete.png) |
 
@@ -52,7 +52,7 @@
 | Page | Screenshot |
 |------|------------|
 | Login  | ![](habits/static/images-testing/opera-login.png) |
-| Register  | ![]() |
+| Register  | ![](habits/static/images-testing/opera-register.png) |
 | Save Habit  | ![](habits/static/images-testing/opera-save.png) |
 | Edit/Delete Habit  | ![](habits/static/images-testing/opera-edit-delete.png) |
 
@@ -64,12 +64,11 @@
 | Page | Screenshot |
 |------|------------|
 | Login  | ![](habits/static/images-testing/mozilla-login.png) |
-| Register  | ![]() |
+| Register  | ![](habits/static/images-testing/mozilla-register.png) |
 | Save Habit  | ![](habits/static/images-testing/mozilla-save.png) |
 | Edit/Delete Habit  | ![](habits/static/images-testing/mozilla-edit-delete.png) |
 
 </details>
-
 
 ## Responsiveness
 
@@ -149,11 +148,11 @@
 
 | **Action** | **What User Does** | **Screenshot** |
 |------------|---------------------------|----------------|
-| Create     | User fill in habbit form and click submit to add new habbit | ![Create Screenshot]() |
-| Edit       | User select existng habbit, update info and open edit form | ![Edit Screenshot]() |
-| Save       | User edit habbit and click save to update it in databse | ![Save Screenshot]() |
-| Delete     | User click delete buton next to habbit to remove it | ![Delete Screenshot]() |
-| Toggle     | User click "Completed Today" checkbok to mark habbit done/undone | ![Toggle Screenshot]() |
+| Create     | User fill in habbit form and click submit to add new habbit | ![Create Screenshot](habits/static/images-testing/crud-create.png) |
+| Edit       | User select existng habbit, update info and open edit form | ![Edit Screenshot](habits/static/images-testing/crud-edit.png) |
+| Save       | User edit habbit and click save to update it in databse | ![Save Screenshot](habits/static/images-testing/crud-save.png) |
+| Delete     | User click delete buton next to habbit to remove it | ![Delete Screenshot](habits/static/images-testing/curd-delete.png) |
+| Toggle     | User click "Completed Today" checkbok to mark habbit done/undone | ![Toggle Screenshot](habits/static/images-testing/crud-toggle.png) |
 
 </details>
 

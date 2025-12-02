@@ -27,13 +27,14 @@
     {% if field.errors %}
     <div class="text-danger small">
       {{ field.errors }}
+  
     </div>
     {% endif %}
 
     {% if field.help_text %}
-    <small id="{{ field.id_for_label }}_helptext" class="form-text text-muted">
-      {{ field.help_text }}
-    </small>
+    <div id="{{ field.id_for_label }}_helptext" class="form-text text-muted">
+      {{ field.help_text|safe }}
+    </div>
     {% endif %}
 
   </div>

@@ -2,16 +2,14 @@
 
 ## Project Rationale
 
-Habits Tracker is a web application made with Django that helps users keep track of, create, dleete  and look after their daily habits. User’s can add new habits, check there progress, tick off ones they’ve finished, edit any details that changed, and delete habits they don’t need anymore. Each user has their own private account so all their habit info stays personal and secure, without anyone else being able to see it. The whole idea was to make something simple that isn’t over complicated or confussing for people to use.
+Habits Tracker is a web application made with Django that helps users keep track of, create, delete and look after their daily habits. User’s can add new habits, check there progress, tick off ones they’ve finished, edit any details that changed, and delete habits they don’t need anymore. Each user has their own private account so all their habit info stays personal and secure, without anyone else being able to see it. The whole idea was to make something simple that isn’t over complicated or confusing for people to use.
 
-This app is mainly made for people who want to build better routiens or just try get more organised in thier day-to-day life. It works well for anyone who struggles keeping on top of habits, forgets what they planned to do, or just wants something simple to help keep them motivated. 
-
+This app is mainly made for people who want to build better routines or just try get more organised in their day-to-day life. It works well for anyone who struggles keeping on top of habits, forgets what they planned to do, or just wants something simple to help keep them motivated.
 
 ## User Stories
-  
 - As  a user, I want to register so I can create an account and start tracking habits.
 
-- As  a user, I want to login so I can access my personal d- As dashboard.
+- As  a user, I want to login so I can access my personal dashboard.
 
 - As  a user, I want to logout so my account stays secure.
 
@@ -49,6 +47,7 @@ This app is mainly made for people who want to build better routiens or just try
 ### Features
 ###  Existing Features
 #### navbar:
+
 -The navbar shows up at the top of every page so ppl can find their way around easier.
 nav-links: 
 Home (where the list of habits is)
@@ -91,37 +90,37 @@ Secure user authentiction is implemented using Django’s built-in forms.
 
 Register Page
 
-Allows new users to creat an account
+Allows new users to create an account
 
-Automaticaly logs them in upon succesful registration
+Automatically logs them in upon successful registration
 
 Login Page
 
 Uses Django AuthenticationForm
 
-Provides error feedbak for incorect credentials
+Provides error feedback for incorrect credentials
 
 Logout
 
-Ends the sesson and redirects users to the login page.
+Ends the session and redirects users to the login page.
 
 ###  Future  Features
+Habit Categories
 
-Habit Categrories
-
-- Group habbits by type (health, work, personal) to keep things orgnized.
+- Group habits by type (health, work, personal) to keep things organized.
 
 Dashboard Themes
 
-L- ight/dark mode or custom thems so users can pick what looks best.
+- Light/dark mode or custom themes so users can pick what looks best.
 
 Password Reset
 
-- Users can resset forgotten passwords via an email link.
+- Users can reset forgotten passwords via an email link.
 
 Two-Factor Auth
 
-- Optional 2FA for extra securtiy at login.
+- Optional 2FA for extra security at login.
+
 
 ## Tools & Technologies Used
 
@@ -185,7 +184,7 @@ This setup makes sure that data is stored consistantly and in a organized way., 
 - Render automatically installs all dependencies from `requirements.txt`.  
 - The app runs using Render’s default Python web service settings.  
 - Environment variables (e.g., `SECRET_KEY`, `DEBUG`) are configured in the Render dashboard.  
-- Live site link: 
+- Live  link:  
 
 ## Local deployment 
 

@@ -184,12 +184,12 @@ This setup makes sure that data is stored consistantly and in a organized way., 
 - Render automatically installs all dependencies from `requirements.txt`.  
 - The app runs using Render’s default Python web service settings.  
 - Environment variables (e.g., `SECRET_KEY`, `DEBUG`) are configured in the Render dashboard.  
-- Live  link:  
+- [Live  link] (https://habit-tracker-2-wdwf.onrender.com/login/?next=/)
 
 ## Local deployment 
 
 - Clone the repository  
-  * git clone  https://github.com/your-username/your-project.git
+  * git clone  (https://github.com/your-username/your-project.git)
 
 - Change directory  
   * cd your-project
